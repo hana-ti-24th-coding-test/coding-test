@@ -1,3 +1,3 @@
-# coding-test
+# Hana TI 25th - Coding test
 
-commit test
+> **TBD: Study convention**
