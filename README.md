@@ -99,5 +99,6 @@ $ git pull origin main
         - [lcs](https://youtube.com/watch?v=z8KVLz9BFIo&si=lp-hsG7KXH9SQDpf)
         - [최단 경로 알고리즘](https://youtu.be/acqm9mM1P6o?si=dJw-_KGsLoK8rv0q)
         - [Union-find, 크루스칼, 위상정렬](https://youtu.be/aOhhNFTIeFI?si=IxtSROGJQZv9bOgU)
-
-
+4. markdown
+    - [docs](https://www.markdownguide.org/getting-started/)
+    - [예시 (김민재 프로젝트 readme)](https://github.com/SW-Engineering-Team1/agricola_backend/blob/main/README.md)
