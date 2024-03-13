@@ -1,7 +1,7 @@
 # Hana TI 24th - Coding test
 
 > **TBD: Study convention**
-fdasdf
+f
 ### 진행 요일
 
 - 매주 월요일 18:00 ~ TBD
