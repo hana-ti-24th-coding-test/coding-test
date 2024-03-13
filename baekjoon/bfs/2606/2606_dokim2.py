@@ -35,14 +35,14 @@ def bfs(start):
             if not visited[nxt]:
                 visited[nxt] = True
                 q.append(nxt)
-                # cnt += 1
+                cnt += 1
 
 
-# bfs(1)
-for i in range(1, len(computers)):
-    if not visited[i]:
-        bfs(i)
-        cnt += 1
+bfs(1)
+# for i in range(1, len(computers)):
+#     if not visited[i]:
+#         bfs(i)
+#         cnt += 1
 
 print(cnt)
 
