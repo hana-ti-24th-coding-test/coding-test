@@ -33,5 +33,3 @@ def bfs(graph):
 
 result = bfs(graph)
 print(result)
-
-

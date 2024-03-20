@@ -39,4 +39,3 @@ for _ in range(T):
                 bfs(graph, j, i)
                 worms += 1
     print(worms)
-
