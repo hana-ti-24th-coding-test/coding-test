@@ -11,32 +11,27 @@ for i in range(N):
     str = sys.stdin.readline().strip()
     for j in range(M):
         graph[i].append(int(str[j]))
-count = - 1
 
-def bfs(graph, x, y):
-    global count
-    queue = deque([(x, y)])
-    graph[y][x] = 0 # 방문처리
+def bfs(graph):
+    queue = deque([(0, 0, 1)])  # 시작점에서 시작하고 거리를 함께 저장
+    graph[0][0] = 0  # 시작점 방문처리
     while queue:
-        x, y = queue.popleft()
+        x, y, distance = queue.popleft()
+        # 도착점에 도달했을 때
+        if x == M - 1 and y == N - 1:
+            return distance  # 현재까지의 거리 반환
         # 4방향 탐색
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             # 인덱스 범위를 넘어가면 다음 탐색을 한다.
             if 0 <= nx < M and 0 <= ny < N and graph[ny][nx] == 1:
-                if graph[N - 1][M - 1]:
-                    queue.append((nx, ny))
-                    graph[ny][nx] = 0
-                    count += 1
-                else:
-                    break
+                queue.append((nx, ny, distance + 1))  # 다음 위치와 거리를 큐에 추가
+                graph[ny][nx] = 0  # 방문처리
+    return -1  # 도착점에 도달하지 못했을 때
 
 
-for i in range(N):
-    for j in range(M):
-        if graph[i][j] == 1:
-            bfs(graph, j, i)
+result = bfs(graph)
+print(result)
 
-print(count)
 
