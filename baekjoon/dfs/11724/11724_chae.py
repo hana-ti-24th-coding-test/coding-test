@@ -20,4 +20,5 @@ for i in range(1, N + 1):
     if not visited[i]:
         dfs(graph, i, visited)
         connected += 1
+
 print(connected)
