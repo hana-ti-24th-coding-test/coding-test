@@ -4,6 +4,8 @@ from collections import deque
 T = int(sys.stdin.readline())
 dir = [[1, 0], [-1, 0], [0, -1], [0, 1]] #상하좌우
 
+# 북동 => [-1, 1], 남동, 북서, 남서
+
 def bfs(r, c):
     # 시작 노드 큐에 추가
     queue = deque()
@@ -20,6 +22,10 @@ def bfs(r, c):
             # 상하좌우로 이동
             nr = r + dir[i][0]
             nc = c + dir[i][1]
+
+            # 범위 밖으로 나가면 무시하는 코드 ---> 이것도 넣어줘야 예상치 못한 오류 발생 가능성 줄일 수 있음
+            # if nr < 0 or nr >= N or nc < 0 or nc >= M:
+            #     continue
 
             if 0 <= nr < N and 0 <= nc < M and graph[nr][nc] == 1:
                 # 상하좌우로 이동한 후 큐에 추가, 방문처리
