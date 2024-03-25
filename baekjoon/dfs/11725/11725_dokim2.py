@@ -22,9 +22,3 @@ dfs(1)
 for x in range(2, n+1):
     print(visited[x])
 
-'''
-            1
-        6       4
-    3         2     7
-5
-'''
