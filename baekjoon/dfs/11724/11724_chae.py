@@ -9,7 +9,6 @@ visited = [False] * (N + 1)
 connected = 0
 
 def dfs(graph, start, visited):
-    global connected
     visited[start] = True
     for i in graph[start]:
         if not visited[i]:
