@@ -15,7 +15,7 @@ def bfs(x, y) :
             nx = x + dx[i]
             ny = y + dy[i]
 
-            # 미로 찾기 공간 벗어난 경우 무시
+            # 미로 찾기 공간 벗어난 경우 무시    => 항상 사용하는 게 좋음 (오류 방지)
             if nx < 0 or nx >= n or ny < 0 or ny >= m:
                 continue
             # 벽인 경우 무시
@@ -35,8 +35,18 @@ graph = []
 for i in range(n) :
     graph.append(list(map(int, input())))
 
-# 이동할 방향 정의
+# 이동할 방향 정의     => 유용하게 쓰인다!
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
-print(bfs(0, 0) + 1)
+# 동, 서, 남, 북, 북동, 북서, 남동, 남서
+# dx = [0, 0, 1, -1, 1, 1, -1, -1]
+# dy = [1, -1, 0, 0, 1, -1, 1, -1]
+
+print(bfs(0, 0))
+
+
+# cf) 주어진 맵을 변경하지 않고 하는 법!
+# visited[x][y] = True
+# if graph[nx][ny] == 1 and visited[nx][ny] == 0 :
+#       visited[nx][ny] = visited[x][y] + 1
