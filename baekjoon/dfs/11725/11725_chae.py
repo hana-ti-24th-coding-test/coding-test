@@ -1,4 +1,6 @@
 import sys
+sys.setrecursionlimit(10**6)
+
 N = int(sys.stdin.readline())
 graph = [[] for _ in range(N + 1)]  # 양방향 그래프
 for i in range(N - 1):
