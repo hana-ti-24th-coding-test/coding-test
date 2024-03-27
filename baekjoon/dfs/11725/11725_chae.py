@@ -1,6 +1,4 @@
 import sys
-sys.setrecursionlimit(10**8)
-
 N = int(sys.stdin.readline())
 graph = [[] for _ in range(N + 1)]  # 양방향 그래프
 for i in range(N - 1):
@@ -18,7 +16,7 @@ def dfs(start):
             nodes[i] = start  # 현재 노드의 부모를 저장
             dfs(i)
 
-
+print(graph)
 dfs(1)  # 루트가 1
 for i in range(2, N + 1):  # 2번 노트부터 출력
     print(nodes[i])
