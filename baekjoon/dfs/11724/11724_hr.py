@@ -18,10 +18,12 @@ def dfs(start):
 
     for i in graph[start]:
         if not visited[i]:
+            visited[start] = True
             dfs(i)
 
 for i in range(1, N+1):
     if not visited[i]: # 방문되지 않은 정점이라면 연결되지 않은 것이라 파악 해 count + 1, 해당 정점과 연결된 정점들 방문 처리
+        visited[i] = True
         dfs(i)
         count += 1
 
