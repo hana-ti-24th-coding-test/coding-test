@@ -38,5 +38,5 @@ for a, b, c in connections:
         print(a, b, c)
         union_parent(parent, a, b)
         cost += c
-print(parent)
+# print(parent)
 print(cost)
