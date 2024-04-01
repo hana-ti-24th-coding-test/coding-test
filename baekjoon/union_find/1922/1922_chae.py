@@ -1,22 +1,23 @@
 import sys
 
-# 최소 신장 트리 : 주어진 그래프의 모든 정점들을 연결하는 부분 그래프 중에서 그 가중치의 합이 최소인 트리
+#  모든 컴퓨터를 연결하는데 필요한 최소비용 => 최소 신장 트리
 # 노드와 간선(Union 연산)의 개수 입력받기
-V, E = map(int, sys.stdin.readline().split())
+N = int(sys.stdin.readline())
+M = int(sys.stdin.readline())
 # 간선을 담을 리스트
 edges = []
-for i in range(E):
-    # 비용 순으로 정렬하기 위해 cost를 첫번째 원소로 하는 튜플 생성
+for i in range(M):
     A, B, cost = map(int, sys.stdin.readline().split())
+    # 비용 순으로 정렬하기 위해 cost를 첫번째 원소로 하는 튜플 생성
     edges.append((cost, A, B))
 # 비용 순으로 오름차순 정렬
 edges.sort()
 # 최종 비용
 result = 0
 # 부모 노드 초기화
-parent = [0] * (V + 1)
+parent = [0] * (N + 1)
 # 부모를 자기 자신으로 초기화
-for i in range(1, V + 1):
+for i in range(1, N + 1):
     parent[i] = i
 
 
