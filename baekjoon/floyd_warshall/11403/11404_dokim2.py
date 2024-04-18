@@ -22,3 +22,4 @@ for g in range(1, len(graph)):
         else:
             print(graph[g][j], end=" ")
     print()
+alskjasdf
