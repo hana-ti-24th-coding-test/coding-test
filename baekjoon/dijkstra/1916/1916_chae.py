@@ -70,3 +70,10 @@ dijkstra(start)
 
 print(distance[end])
 
+
+
+# list = [[2,99],[99,3],[5,2],[1,2],[3,4],[99,66],[98,67]]
+#
+#
+# list.sort(key=lambda x:([x[0],x[1]]))
+# print(list)
