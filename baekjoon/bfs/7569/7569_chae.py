@@ -33,8 +33,8 @@ for i in graph:
         if 0 in j:
             # -1 출력
             print(-1)
-            exit(0)  # 프로그램 종료
+            exit(0)  # 프로그램 종료 / 함수 만들어서 return하는 방법도 있음
         # 각 층(graph[i])에서 가장 큰 값을 찾고, 그것을 전체 최대값(answer)과 비교하여 업데이트
         answer = max(answer, max(j))
-# max(j)는 1이므로 걸린 날짜는 -1을 해야 한다.
+# max(j)는 1(처음 bfs 시작 조건)이므로 걸린 날짜는 -1을 해야 한다.
 print(answer - 1)
