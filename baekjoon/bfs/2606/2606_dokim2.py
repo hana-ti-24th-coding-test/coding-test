@@ -8,7 +8,6 @@ n = int(sys.stdin.readline())
 computers = [[] for _ in range(n + 1)]
 visited = [False] * (n + 1)
 
-
 pairCnt = int(sys.stdin.readline())
 for _ in range(pairCnt):
     a, b = map(int, sys.stdin.readline().split())
@@ -19,7 +18,6 @@ for _ in range(pairCnt):
 #     print(com)
 
 cnt = 0
-
 
 def bfs(start):
     global cnt
@@ -45,4 +43,13 @@ bfs(1)
 #         cnt += 1
 
 print(cnt)
+
+
+
+
+
+
+
+
+
 
